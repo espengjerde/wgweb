@@ -49,7 +49,22 @@ echo "<html>
 <head>
 	<title>$CLIENT VPN details</title>
 </head>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+    h1.heading {
+            display: block;
+            background-color: #823130;
+            color: white;
+            padding:0.1em 0 1em 0;
+            text-align: center;
+    }
+</style>
 <body>
+<h1 class=\"heading\">Wireguard Profile</h1>
 <h1>Getting the client software</h1>
 <p>Download the Client from the <a href=\"https://wireguard.com/install/\">WireGuard Website</a></p>
 <h1> $CLIENT vpn configuration </h1>
@@ -72,3 +87,4 @@ echo "</pre>
 </body>
 </html>" >> index.html
 
+echo "Client configuration available at /clients/$CLIENT/index.html
