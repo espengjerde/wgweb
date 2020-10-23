@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+    h1.heading {
+            display: block;
+            background-color: #823130;
+            color: white;
+            padding:0.1em 0 1em 0;
+            text-align: center;
+    }
+</style>
+</head>
+<body>
+<h1 class="heading">Welcome to Wireguard VPN</h1>
+<h1>Server configuration</h1>
+<p> All server configuration is done in CLI. Please log in via SSH or USB console</p>
+<h1>Client configuration</h1>
+<p>You can grab client configuration in the <a href="./clients">/clients</a>-section.
+</p>
+<h1>Adding new clients</h1>
+<p>New clients can be added from the cli, using the command <em>sudo ./new_vpn_user.sh &lt;user&gt;</em>
+</p>
+<pre>
+usr@wireguard:~ $ sudo ./new_vpn_user.sh Alice
+::: Client Keys generated
+::: Client config generated
+::: Updated server config
+::: WireGuard restarted
+======================================================================
+::: Done! Alice.conf successfully created!
+::: Alice.conf was copied to /home/netacs/configs for easy transfer.
+::: Please use this profile only on one device and create additional
+::: profiles for other devices. You can also use pivpn -qr
+::: to generate a QR Code you can scan with the mobile app.
+======================================================================
+creating HTML-file...
+Client configuration available at /clients/Alice/index.html
+</pre>
+<h2>Removing users</h2>
+Removing user must be done from ssh cli, using command <em>sudo pivpn remove &lt;username&gt;</em>
+<pre>
+usr@wireguard:~ $ sudo ./remove_vpn_user.sh Bob
+Bob           1289301208fcnbf71g2bvwfh21039jb=      23 Oct 2020, 2:02, BST
+Do you really want to delete Bob? [Y/n] y
+::: Updated server config
+::: Client config for Bob removed
+::: Client Keys for Bob removed
+::: Successfully deleted Bob
+::: WireGuard restarted
+::: Deleted Bob folder from webui
+</pre>
+<br>
+<p><em>Thank you for taking privacy seriously</em></p>
+</body>
+</html>
