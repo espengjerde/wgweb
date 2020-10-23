@@ -87,4 +87,4 @@ echo "</pre>
 </body>
 </html>" >> index.html
 
-echo "Client configuration available at /clients/$CLIENT/index.html
+echo "Client configuration available at /clients/$CLIENT/index.html"
