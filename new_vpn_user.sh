@@ -87,4 +87,6 @@ echo "</pre>
 </body>
 </html>" >> index.html
 
+chown www-data:www-data *
+
 echo "Client configuration available at /clients/$CLIENT/index.html"
